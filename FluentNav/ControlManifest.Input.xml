@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="FluentNav" constructor="FluentNav" version="0.0.3" display-name-key="FluentNav" description-key="Fluent UI v2 Navigation Drawer Component for Canvas Apps" control-type="virtual">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    
+    <!-- Dataset for navigation items -->
+    <data-set name="navItems" display-name-key="Navigation Items" description-key="Collection of navigation items to display">
+      <property-set name="ItemKey" display-name-key="Item Key" description-key="Unique key for the item" of-type="SingleLine.Text" usage="bound" required="true" />
+      <property-set name="ItemName" display-name-key="Item Name" description-key="Display name for the navigation item" of-type="SingleLine.Text" usage="bound" required="true" />
+      <property-set name="ItemIcon" display-name-key="Item Icon" description-key="Fluent UI icon name (e.g., Home, Settings, Dashboard)" of-type="SingleLine.Text" usage="bound" required="false" />
+      <property-set name="ItemParentKey" display-name-key="Parent Key" description-key="Key of the parent item for nested navigation" of-type="SingleLine.Text" usage="bound" required="false" />
+    </data-set>
+    
+    <!-- Input Properties -->
+    <property name="DefaultSelectedKey" display-name-key="Default Selected Key" description-key="The key of the initially selected item" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="HeaderTitle" display-name-key="Header Title" description-key="Title displayed in the navigation header (e.g., Contoso HR)" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="HeaderIcon" display-name-key="Header Icon" description-key="Fluent UI icon name for the header (e.g., Person, Home)" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="HeaderImageUrl" display-name-key="Header Image URL" description-key="URL to a custom image/SVG for the header icon (overrides HeaderIcon)" of-type="SingleLine.URL" usage="input" required="false" />
+    
+    <!-- Output Properties -->
+    <property name="SelectedKey" display-name-key="Selected Key" description-key="The key of the currently selected navigation item" of-type="SingleLine.Text" usage="output" />
+    <property name="IsOpen" display-name-key="Is Open" description-key="Whether the navigation drawer is expanded (true) or collapsed (false)" of-type="TwoOptions" usage="output" />
+    <property name="HeaderSelected" display-name-key="Header Selected" description-key="Triggers when the header item is clicked (toggles true/false)" of-type="TwoOptions" usage="output" />
+    
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="9.68.0" />
+    </resources>
+  </control>
+</manifest>

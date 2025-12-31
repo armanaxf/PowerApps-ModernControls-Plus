@@ -1,0 +1,23 @@
+ItemKey,ItemName,ItemIcon,ItemParentKey
+home,Home,Home,
+dashboard,Dashboard,Dashboard,
+mail,Mail,Mail,
+calendar,Calendar,Calendar,
+people,People,People,
+settings,Settings,Settings,
+documents,Documents,Document,
+doc1,Annual Report 2024 - Q4 Financial Summary with Extended Title,Document,documents
+doc2,Budget Plan,Document,documents
+chat,Chat,Chat,
+search,Search,Search,
+analytics,Analytics Dashboard,Analytics,
+reports,Reports,Reports,
+training,Training Programs,Training,
+health,Health Plans,Health,
+announcements,Company Announcements,Announcements,
+jobs,Job Postings,JobPostings,
+item18,Navigation Item 18,Person,
+item19,Navigation Item 19,Person,
+item20,Navigation Item 20,Person,
+item21,Navigation Item 21 - Testing Scroll,Person,
+item22,Navigation Item 22,Person,

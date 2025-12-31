@@ -1,0 +1,12 @@
+ItemKey,ItemName,ItemIcon,ItemParentKey
+home,Home,Home,
+dashboard,Dashboard,Grid,
+mail,Mail,Mail,
+calendar,Calendar,Calendar,
+people,People,People,
+settings,Settings,Settings,
+documents,Documents,Document,
+doc1,Annual Report,Document,documents
+doc2,Budget Plan,Document,documents
+chat,Chat,Chat,
+search,Search,Search,
