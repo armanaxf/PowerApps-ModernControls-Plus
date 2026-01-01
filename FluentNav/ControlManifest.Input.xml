@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="FluentNav" constructor="FluentNav" version="0.0.5" display-name-key="FluentNav" description-key="Fluent UI v2 Navigation Drawer Component for Canvas Apps" control-type="virtual">
+  <control namespace="FluentNav" constructor="FluentNav" version="0.0.6" display-name-key="FluentNav" description-key="Fluent UI v2 Navigation Drawer Component for Canvas Apps" control-type="virtual">
     <external-service-usage enabled="false">
     </external-service-usage>
     

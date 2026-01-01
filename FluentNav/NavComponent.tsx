@@ -76,14 +76,6 @@ const useStyles = makeStyles({
         // Expanded: ~260px, Collapsed: ~48px
         height: '100%',
     },
-    hamburgerContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-        padding: tokens.spacingVerticalS,
-        height: '100%',
-    },
     headerImage: {
         width: '32px',
         height: '32px',
@@ -350,15 +342,6 @@ export const FluentNavComponent: React.FC<IFluentNavProps> = (props) => {
                         {renderNavItems(navTree)}
                     </NavDrawerBody>
                 </NavDrawer>
-
-                {/* Hamburger for collapsed state - shown outside drawer when collapsed */}
-                {!isOpen && (
-                    <div className={styles.hamburgerContainer}>
-                        <Tooltip content="Expand navigation" relationship="label">
-                            <Hamburger onClick={handleToggle} />
-                        </Tooltip>
-                    </div>
-                )}
             </div>
         </FluentProvider>
     );
