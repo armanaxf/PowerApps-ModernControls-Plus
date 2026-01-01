@@ -15,7 +15,6 @@ import {
     NavItem,
     NavSubItemGroup,
     NavSubItem,
-    NavSubItemProps,
     NavSectionHeader,
     NavDivider,
     AppItem,
@@ -70,15 +69,20 @@ const useStyles = makeStyles({
         height: '100%',
         overflow: 'hidden',
         display: 'flex',
+        flexDirection: 'row',
     },
     navDrawer: {
         // NavDrawer handles its own internal sizing
         // Expanded: ~260px, Collapsed: ~48px
+        height: '100%',
     },
     hamburgerContainer: {
         display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
         justifyContent: 'flex-start',
         padding: tokens.spacingVerticalS,
+        height: '100%',
     },
     headerImage: {
         width: '32px',
