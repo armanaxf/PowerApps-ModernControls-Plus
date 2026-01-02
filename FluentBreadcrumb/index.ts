@@ -42,11 +42,9 @@ export class FluentBreadcrumb implements ComponentFramework.ReactControl<IInputs
 
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const items = this.mapDatasetToItems(context);
-        const theme = (context.parameters.Theme?.raw ?? "webLight") as "webLight" | "webDark" | "teamsLight" | "teamsDark";
 
         return React.createElement(FluentBreadcrumbComponent, {
             items: items,
-            theme: theme,
             onItemSelect: this.handleItemSelect
         });
     }

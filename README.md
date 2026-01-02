@@ -59,13 +59,12 @@ An inline message bar for displaying alerts and notifications.
 
 ### FluentBreadcrumb
 
-A breadcrumb component for hierarchical navigation.
+A breadcrumb component for hierarchical navigation. Automatically inherits Power Apps modern theme.
 
 **Properties:**
 | Property | Type | Description |
 |----------|------|-------------|
 | `items` | Dataset | Collection of breadcrumb items (ItemKey, ItemName, ItemIcon) |
-| `Theme` | Enum | `webLight`, `webDark`, `teamsLight`, or `teamsDark` |
 | `SelectedKey` | Text (Output) | Key of the clicked breadcrumb item |
 
 ## Development

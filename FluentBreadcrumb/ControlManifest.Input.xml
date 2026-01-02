@@ -11,14 +11,7 @@
       <property-set name="ItemIcon" display-name-key="Item Icon" description-key="Optional Fluent UI icon name" of-type="SingleLine.Text" usage="bound" required="false" />
     </data-set>
     
-    <!-- Input Properties -->
-    <property name="Theme" display-name-key="Theme" description-key="Theme of the control" of-type="Enum" usage="input" required="false" default-value="webLight">
-       <value name="webLight" display-name-key="Web Light">Web Light</value>
-       <value name="webDark" display-name-key="Web Dark">Web Dark</value>
-       <value name="teamsLight" display-name-key="Teams Light">Teams Light</value>
-       <value name="teamsDark" display-name-key="Teams Dark">Teams Dark</value>
-    </property>
-
+    
     <!-- Output Properties -->
     <property name="SelectedKey" display-name-key="Selected Key" description-key="The key of the clicked breadcrumb item" of-type="SingleLine.Text" usage="output" />
     
