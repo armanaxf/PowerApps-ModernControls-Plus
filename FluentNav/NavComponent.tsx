@@ -5,11 +5,11 @@ import {
     Tooltip,
     makeStyles,
     tokens,
+    Button,
 } from '@fluentui/react-components';
 import {
     NavDrawer,
     NavDrawerBody,
-    NavDrawerHeader,
     NavCategory,
     NavCategoryItem,
     NavItem,
@@ -18,7 +18,6 @@ import {
     NavSectionHeader,
     NavDivider,
     AppItem,
-    Hamburger,
     NavDrawerProps,
 } from '@fluentui/react-nav';
 import {
@@ -60,6 +59,7 @@ import {
     DataArea20Regular,
     DocumentBulletListMultiple20Filled,
     DocumentBulletListMultiple20Regular,
+    NavigationRegular,
 } from '@fluentui/react-icons';
 
 // Styles
@@ -70,11 +70,19 @@ const useStyles = makeStyles({
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'row',
+        position: 'relative',
+    },
+    hamburgerButton: {
+        position: 'absolute',
+        top: '8px',
+        left: '8px',
+        zIndex: 100,
+        minWidth: '32px',
+        minHeight: '32px',
     },
     navDrawer: {
-        // NavDrawer handles its own internal sizing
-        // Expanded: ~260px, Collapsed: ~48px
         height: '100%',
+        marginTop: '48px', // Space for hamburger
     },
     headerImage: {
         width: '32px',
@@ -300,6 +308,17 @@ export const FluentNavComponent: React.FC<IFluentNavProps> = (props) => {
     return (
         <FluentProvider theme={theme}>
             <div className={styles.root}>
+                {/* Hamburger button - always visible */}
+                <Tooltip content={isOpen ? "Collapse navigation" : "Expand navigation"} relationship="label">
+                    <Button
+                        appearance="subtle"
+                        icon={<NavigationRegular />}
+                        onClick={handleToggle}
+                        className={styles.hamburgerButton}
+                        aria-label={isOpen ? "Collapse navigation" : "Expand navigation"}
+                    />
+                </Tooltip>
+
                 <NavDrawer
                     open={isOpen}
                     type={drawerType}
@@ -309,12 +328,6 @@ export const FluentNavComponent: React.FC<IFluentNavProps> = (props) => {
                     className={styles.navDrawer}
                     multiple
                 >
-                    <NavDrawerHeader>
-                        <Tooltip content={isOpen ? "Collapse navigation" : "Expand navigation"} relationship="label">
-                            <Hamburger onClick={handleToggle} />
-                        </Tooltip>
-                    </NavDrawerHeader>
-
                     <NavDrawerBody>
                         {/* Header/App Item */}
                         {headerTitle && (

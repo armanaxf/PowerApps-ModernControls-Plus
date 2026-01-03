@@ -143,6 +143,15 @@ export const FluentCardComponent: React.FC<FluentCardProps> = (props) => {
                                 src={image}
                                 alt={title}
                                 className={styles.previewImage}
+                                onError={(e) => {
+                                    // Log error for debugging
+                                    console.warn('FluentCard: Image failed to load. Source:', image);
+                                    // Hide broken image
+                                    (e.target as HTMLImageElement).style.display = 'none';
+                                }}
+                                onLoad={() => {
+                                    console.log('FluentCard: Image loaded successfully');
+                                }}
                             />
                         </CardPreview>
                     )}

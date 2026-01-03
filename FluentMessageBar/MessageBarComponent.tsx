@@ -32,6 +32,8 @@ export const FluentMessageBarComponent: React.FC<FluentMessageBarComponentProps>
         onAction,
     } = props;
 
+    // Note: dismissed state resets when component re-mounts
+    // Power Apps native Visible property controls mount/unmount
     const [dismissed, setDismissed] = React.useState(false);
 
     const handleDismiss = React.useCallback(() => {
